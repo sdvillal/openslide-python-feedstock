@@ -1,18 +1,20 @@
 # Originally from bioconda, building for windows.
 
 {% set name = "openslide-python" %}
-{% set version = "1.1.1" %}
+{% set version = "1.1.1.post1" %}
+{% set commit = "3e9fbca4ea4e729756c6cf76f7bca87e3e8846d1" %}
 
 package:
   name: "{{ name|lower }}"
   version: "{{ version }}"
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: b460764914f3b9736f9bdd551da7927e194ed28d78588759a0a793dffe1749a6
+  # until the new version after 1.1.1. gets release, we need to cut from master
+  url: https://github.com/openslide/openslide-python/archive/{{ commit }}.zip
+  sha256: 998597c5c11c3e05f48632648067cb5fe3884f05cd87d2c23d22c496d17a7fd7
 
 build:
-  number: 1
+  number: 0
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv "
 
 requirements:
