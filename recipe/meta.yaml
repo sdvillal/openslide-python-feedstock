@@ -1,16 +1,14 @@
-# Originally from bioconda, building for windows.
+# Originally from bioconda, building against newer openslide builds and for windows.
 
 {% set name = "openslide-python" %}
-{% set version = "1.1.1.post1" %}
-{% set commit = "3e9fbca4ea4e729756c6cf76f7bca87e3e8846d1" %}
+{% set version = "1.1.2" %}
 
 package:
   name: "{{ name|lower }}"
   version: "{{ version }}"
 
 source:
-  # until the new version after 1.1.1. gets release, we need to cut from master
-  url: https://github.com/openslide/openslide-python/archive/{{ commit }}.zip
+  url: https://github.com/openslide/openslide-python/releases/download/v{{ version }}/openslide-python-{{ version }}.tar.gz
   sha256: 998597c5c11c3e05f48632648067cb5fe3884f05cd87d2c23d22c496d17a7fd7
 
 build:
