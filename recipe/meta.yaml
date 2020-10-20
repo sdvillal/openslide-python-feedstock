@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://github.com/openslide/openslide-python/releases/download/v{{ version }}/openslide-python-{{ version }}.tar.gz
-  sha256: 998597c5c11c3e05f48632648067cb5fe3884f05cd87d2c23d22c496d17a7fd7
+  sha256: 00f5e34dca56500b598454107a0acf243788ea2072b5468b3fea59f756b832a8
 
 build:
   number: 0
