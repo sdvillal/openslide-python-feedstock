@@ -8,7 +8,7 @@ package:
   version: "{{ version }}"
 
 source:
-  url: https://github.com/openslide/openslide-python/releases/download/v{{ version }}/openslide-python-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 00f5e34dca56500b598454107a0acf243788ea2072b5468b3fea59f756b832a8
 
 build:
